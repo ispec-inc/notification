@@ -8,7 +8,7 @@ import (
 	reflect "reflect"
 
 	gomock "github.com/golang/mock/gomock"
-	notification "github.com/ispec-inc/bewin-monorepo/admin/pkg/notification"
+	notification "github.com/ispec-inc/notification"
 )
 
 // MockPublisher is a mock of Publisher interface.
