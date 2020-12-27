@@ -10,6 +10,7 @@ import (
 	"github.com/aws/aws-sdk-go/service/sns"
 )
 
+// AWSPublisher is a AWS SNS implementation of the `Service` interface
 type AWSPublisher struct {
 	PlatformApplicationArn string
 	SNS                    *sns.SNS
@@ -48,6 +49,7 @@ type data struct {
 	URL     string `json:"url"`
 }
 
+// NewAWS is a contructor of the `AWSPublisher`
 func NewAWS(
 	accessKey string,
 	secretKey string,
@@ -66,6 +68,7 @@ func NewAWS(
 	}
 }
 
+// Send a notification by using AWS SNS
 func (a AWSPublisher) Send(input Input) error {
 	log.Println(input)
 	edarn, err := a.createEndpoint(input.DeviceToken)
