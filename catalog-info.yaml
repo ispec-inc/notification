@@ -3,6 +3,7 @@ kind: Component
 metadata:
   name: notification
   title: high testability notification service
+  github.com/project-slug: ispec-inc/notification
   description: |
   tags:
     - golang
