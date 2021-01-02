@@ -9,7 +9,7 @@ metadata:
     - golang
     - notification
 spec:
-  type: service
+  type: library
   owner: yamad07
   lifecycle: experimental
   providesApis:
