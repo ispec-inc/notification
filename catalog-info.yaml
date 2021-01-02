@@ -1,0 +1,15 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: notification
+  title: high testability notification service
+  description: |
+  tags:
+    - golang
+    - notification
+spec:
+  type: service
+  owner: yamad07
+  lifecycle: experimental
+  providesApis:
+    - bewin-admin
