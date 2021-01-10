@@ -13,6 +13,8 @@
 高いテスタビリティと、高いユーザービリティ(仕様理解への時間を下げたシンプルなインターフェイス)を兼ね備えた通知のライブラリを構築する。
 
 # High-level Architecture
+![notifications](https://user-images.githubusercontent.com/20740529/104127036-317d4500-53a3-11eb-9220-4a57eacb464f.jpg)
+
 ## Interface-Driven
 `notification.Input`のStructを受け取り、通知を送信する`notification.Service`のInterfaceを実装。Interface経由で実装をすることで、ローカル・テスト環境では`notification.LocalLogger`をDIし、ステージング・本番環境では`notification.AWSPublisher`をDIすることで、高いテスタビリティを維持できる。
 
