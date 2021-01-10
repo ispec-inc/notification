@@ -1,3 +1,6 @@
 site_name: notification
+nav:
+  - DesignDoc: index.md
 
-DesignDoc: index.md
+plugins:
+  - techdocs-core
