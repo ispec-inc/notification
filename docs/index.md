@@ -23,8 +23,8 @@
 ## LocalLogger
 ローカル環境・テスト環境でDIすることを前提としたStruct。`notificaion.Input`をdumpしてログに出力をする。
 
-## AWS SNS
-[AWS SNS](https://aws.amazon.com/jp/sns/)内部的にDeviceTokenを投げてEndpointを作成し、そのEndpointに対して通知を送信する実装にした。
+## AWSPublisher
+[AWS SNS](https://aws.amazon.com/jp/sns/)を用いた通知の実装。内部的にDeviceTokenを投げてEndpointを作成し、そのEndpointに対して通知を送信する実装にした。
 Subscriptionなどを用いた実装になっているため、一回に大量の通知を送らなければいけない場合などは、
 
 - bulkに送信できるメソッドを実装する
