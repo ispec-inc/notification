@@ -16,12 +16,12 @@
 ![notifications](https://user-images.githubusercontent.com/20740529/104127036-317d4500-53a3-11eb-9220-4a57eacb464f.jpg)
 
 ## Interface-Driven
-`notification.Input`のStructを受け取り、通知を送信する`notification.Service`のInterfaceを実装。Interface経由で実装をすることで、ローカル・テスト環境では`notification.LocalLogger`をDIし、ステージング・本番環境では`notification.AWSPublisher`をDIすることで、高いテスタビリティを維持できる。
+`notification.Service`というInterface経由で呼び出しをする設計をしている。これにより、ローカル・テスト環境では`notification.LocalLogger`をDIし、ステージング・本番環境では`notification.AWSPublisher`をDIすることで、高いテスタビリティ、開発体験を維持できる。
 
 
 # Implementation
 ## LocalLogger
-ローカル環境・テスト環境でDIすることを前提としたStruct。`Input`をdumpしてログに出力をする。
+ローカル環境・テスト環境でDIすることを前提としたStruct。`notificaion.Input`をdumpしてログに出力をする。
 
 ## AWS SNS
 [AWS SNS](https://aws.amazon.com/jp/sns/)内部的にDeviceTokenを投げてEndpointを作成し、そのEndpointに対して通知を送信する実装にした。
