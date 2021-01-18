@@ -1,4 +1,5 @@
 site_name: notification
+site_description: High testability notification library
 nav:
   - DesignDoc: index.md
 
